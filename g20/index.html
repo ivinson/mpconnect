@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Geracao compromisso</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .loading-spinner {
+      background: #333;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    .loading-spinner.active {
+      display: block;
+    }
+
+    #hourglass {
+      /* centraliza no meio da tela */
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin: -32px 0 0 -32px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loading-spinner">
+    <center>
+      <img src='https://i.gifer.com/7RRt.gif' width='100%' height='100%'/>
+    </center>
+  </div>
+
+  <section id="banner" class="bg-img" data-bg="bannerfundo.jpg">
+    <div class="">
+      <header>
+        <!-- <h1>This is Road Trip</h1> -->
+      </header>
+    </div>
+    <a href="#footer" class="more">QUERO FAZER PARTE</a>
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <h2>QUERO SER UM INTEGRANTE DA GERACAO COMPROMISSO</h2>
+
+      <form  id="formg20" name="formg20" action="match.php" method="post">
+
+        <div class="field half first">
+          <label for="name">NOME</label>
+          <input name="name" id="name" required type="text" placeholder="DIGITE SEU NOME">
+        </div>
+        <div class="field half">
+          <label for="email">EMAIL</label>
+          <input name="email" id="email" type="email" required placeholder="Email">
+        </div>
+
+        <div class="field half first">
+          <label for="whatsapp">WHATSAPP</label>
+          <input name="whatsapp" id="whatsapp" type="text" required placeholder="whatsapp">
+        </div>
+
+        <div class="field  half">
+          <label for="endereco">ENDERECO</label>
+          <input name="endereco" id="endereco" type="text" required placeholder="DIGITE O SEU ENDERECO COMPLETO">
+        </div>
+
+        <div class="field half first">
+          <label for="dtnascimento">Data de Nascimento</label>
+          <input name="dtnascimento" id="dtnascimento" type="text" required data-mask="00/00/0000" placeholder="Digite a data do seu nascimento">
+     
+          
+          
+        </div>
+
+        <div class="field half 6u 12u$(small)">
+          <input type="checkbox" id="mpclocal" name="mpclocal">
+          <label for="mpclocal">Participa da MPC na sua cidade?</label>
+        </div>
+
+        <ul class="actions">
+          <li id='lblErro'>
+            <h1 style="    color: #ebf978 !important; display:none;">
+              
+            Infelizmente algum campo não esta preenchido corretamente. Verifique novamente,  todos os campos são obrigatórios.
+            </h1>
+            </li>
+          <li><input value="  --> QUERO SER DA GERACAO COMPROMISSO <--  " class="button alt" type="button" id="btn-enviar"></li>
+        </ul>
+      </form>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha256-Kg2zTcFO9LXOc7IwcBx1YeUBJmekycsnTsq2RuFHSZU=" crossorigin="anonymous"></script>
+
+</body>
+<script>
+  var spinner = $('.loading-spinner');
+
+  $('#btn-enviar').on("click", function() {
+    spinner.addClass('active'); // ativa o loading
+
+    // Espera 5 segundos e desativa o loading
+    setTimeout(function() {
+      spinner.removeClass('active');
+//       $('form#formg20').submit();
+      submitform();
+      
+    }, 2000);
+    
+    
+    
+    
+  });
+  
+  
+  
+   function submitform() {
+      // Get first form element
+      var $form = $('form')[0];
+
+      // Check if valid using HTML5 checkValidity() builtin function
+      if ($form.checkValidity()) {
+        console.log('valid');
+        $form.submit();
+      } else {
+        console.log('not valid');
+        $('#lblErro h1').show();
+      }
+      return false;
+    };
+  
+</script>
+
+</html>

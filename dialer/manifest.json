@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "DialerTLV",
+    "scope": "/dialer/",
+    "display": "browser",
+    "start_url": "https://app.mpc.org.br/dialer/",
+    "short_name": "AppMpcOrgBr",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}

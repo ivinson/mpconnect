@@ -1,0 +1,35 @@
+************ Geral por atividade
+qtddecisao		
+qtdinteresse	
+qtdreconciliacao			
+qtdconsagracao	
+radio		
+televisao		
+internet	
+fichasregistradasnoevento
+acompanhamento_pos		Nada | Telefonemas	|Cartas	| whats | facebook
+qtdligacoes_para_interessados
+qtddiscipulado	
+descricaogeral
+
+*** EEA
+Quantos clubes bíblicos ativos e ligados à MPC: 					
+Freqüência média de participantes nos clubinhos por reunião:						
+Relatorio
+
+mes
+ano
+qtd_obreiros_remunerados40hs
+qtd_obreiros_remunerados20hs
+qtd_obreiros_voluntarios40hs
+qtd_obreiros_voluntarios20hs
+qtd_voluntarios_constantes
+qtd_voluntarios_ocasionais
+qtd_discipulados
+qtd_modulo1
+qtd_modulo2
+qtd_contratacao_demissao
+descricao_contratacao_demissao
+dataenvio
+							
+		

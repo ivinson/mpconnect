@@ -1,0 +1,29 @@
+*TODO
+
+##MENSAGENS
+
+Ferramentas 
+Avisos
+
+## FINALIZADOS
+ok [16:50, 25/10/2017] Nane Werner: Oi mano, entrei lá agora e tenho várias observações. Vou te enviar aqui. Não sei se já entra no seu plano de testes, mas pode mandar, precisamos dar foco nisso!
+ok [16:50, 25/10/2017] Nane Werner: Texto de apresentação: Esse é um espaço de colaboração entre voluntários, lideres e obrieros da MPC BRASIL
+ok [16:51, 25/10/2017] Nane Werner: arrumar a palavra "obreiros"
+ok [16:51, 25/10/2017] Nane Werner: Trocar a foto com url, como funciona? Não tem um lugar pra isso, apenas a opção de fazer upload de foto do computador.
+
+ok [16:52, 25/10/2017] Nane Werner: Mandei uma mensagem pra você. Depois de enviar mensagem, senti falta de um link pra retornar à página que estaav
+Colocar msgem no padrão side bar!
+
+ok Estou propondo pro Marcelo um "código interno" de comunicados pro pessoal saber 
+quando estamos falando "sério", já que na MPC tudo é levado meio relax
+Sentimos isso com o lance da BAC e ano que vem daremos outros passos bem sérios
+ relacionados à "Proteção da criança e adolescente" e não podemos ter a mesma 
+ morosidade de resposta do pessoal
+
+•VERDE: sugestão. Quando a informação não tem caráter obrigatório e você pode adotar se achar válido.
+•AMARELO: recomendação. Ainda não é obrigatório, mas se você adotar será muito bom.
+•VERMELHO: determinação. Você não tem a opção de não fazer, é de caráter obrigatório.
+
+ok [16:52, 25/10/2017] Nane Werner: "Escolha cidade que serve" em diante, não está funcionando (preenchi e não salvou)
+
+ok [16:52, 25/10/2017] Nane Werner: Senti falta de umas máscaras pra padronizar telefones, data de nascimento, lista de cidades...

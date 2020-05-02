@@ -1,0 +1,30 @@
+<!--
+  Bootstrap Datepicker - bootstrap-datepicker.readthedocs.org
+-->
+
+<!-- 
+  HTML (Using bootstrap) 
+  Using Awesome Icons
+-->
+
+<div class="input-group date" >
+  <input class="form-control" readonly name="event_date" id="event_date" type="text" value="01/01/2014">
+  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+</div>
+
+
+<!-- Script -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
+<script>
+    $('.input-group.date').datepicker({
+    	format: 'dd/mm/yyyy',
+    	language: 'pt-BR',
+    	weekStart: 0,
+    	startDate:'0d',
+    	todayHighlight: true
+    });
+</script>
+
