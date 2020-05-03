@@ -25,7 +25,19 @@ $messagesQ = $db->query("
 
 select relatoriomensal.id as idrelatorio, cidades.*,relatoriomensal.* from relatoriomensal
   join cidades on (cidades.id = relatoriomensal.idcidade)
-        WHERE relatoriomensal.idcidade = ?  ORDER BY relatoriomensal.mes DESC",array($user->data()->idcidade));
+        WHERE relatoriomensal.idcidade = ? 
+        
+        
+        ORDER BY 
+        -- relatoriomensal.mes, relatoriomensal.ano  
+        cast( concat(  relatoriomensal.ano , '/',  relatoriomensal.mes,'/','01') as DATETIME)         
+        
+        
+        DESC
+        
+        
+        
+        ",array($user->data()->idcidade));
 $messages =  $messagesQ->results();
 
 ?>

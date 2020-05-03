@@ -63,7 +63,21 @@ select
 
 ". $swhere ."
 
-  order by cidades.idregiao, cidades.uf, cidades.nome_cidade,relatoriomensal.mes, relatoriomensal.ano
+  order by 
+  cidades.idregiao, 
+  cidades.uf, 
+  cidades.nome_cidade,
+  cast(
+    concat( 
+   
+    relatoriomensal.ano ,
+    '/',  
+    relatoriomensal.mes,
+     '/',
+   '01'
+    
+    ) as DATETIME)   desc
+  -- relatoriomensal.mes, relatoriomensal.ano
 ");
 
 

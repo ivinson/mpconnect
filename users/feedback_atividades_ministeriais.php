@@ -27,7 +27,7 @@ SELECT *,a.id as IDA FROM
          atividadescidade a
     join tipoatividade b on (a.idtipoatividadea = b.id)
 
- WHERE agendadopor = ?  ORDER BY a.id DESC",array($user->data()->id));
+ WHERE agendadopor = ?  ORDER BY a.datainicio DESC",array($user->data()->id));
 $messages =  $messagesQ->results();
 
 ?>
@@ -51,6 +51,11 @@ $messages =  $messagesQ->results();
                                 </li>
 
                             </ul>
+
+                            <br>
+                            
+                  <a href="relatorio_mensal.php" type="button" class="btn-lg btn-success waves-effect">Fechar Relatório Mensal</a>              
+              
 
     <!-- Tab panes -->
     <div class="tab-content">
@@ -105,7 +110,7 @@ $messages =  $messagesQ->results();
                               
                             <?php } else { ?>
                             <td>  Não pode ser cancelado </td> 
-                            <? } ?>
+                            <?php } ?>
                               </tr>
                               <?php } //end foreach ?>
                             </tbody>
@@ -135,7 +140,7 @@ $messages =  $messagesQ->results();
               
               ?>
                   <a href="relatorio_mensal.php" type="button" class="btn-lg btn-success waves-effect">Fechar Relatório Mensal</a>              
-              
+                 
               <?php 
            
            } ?>

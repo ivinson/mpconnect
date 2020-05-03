@@ -96,6 +96,7 @@ $messages =  $messagesQ->results();
           height: 20px;
           z-index: 400;
         }
+      }
     </style>
 
     <body>
@@ -131,6 +132,10 @@ $messages =  $messagesQ->results();
     WHERE  YEARWEEK(a.datainicio, 1) = YEARWEEK(CURDATE()+1, 1) 
     
     and a.status <> 'cancelado'
+
+    order by a.datainicio desc
+
+
 ")->results();
   
   
@@ -202,9 +207,11 @@ $messages =  $messagesQ->results();
                       <!-- 					<a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a> -->
                       <br>Atividade :
                       <a href="#" class="float-right">
-                        <?=utf8_encode($m->nomeprojeto)?>
+                      <?=$msgDescricao . "</b>  "  //$msgDescricaoC 
+                      ?>
+                        
                       </a>
-                      <p><b><?=$msgDescricao . "</b> <br> " . $msgDescricaoC?></p>
+                      <p>Categoria : <?=utf8_encode($m->nomeprojeto)?> </p>
                       <hr>
                 </li>
                 <?php } //end foreach ?>

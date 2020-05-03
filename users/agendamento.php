@@ -122,7 +122,7 @@ $messages =  $messagesQ->results();
                     <div class="form-group">
                        
                       <label for="tipoevento">
-                        Qual evento irá fazer?
+                        Qual atividade/evento irá fazer?
                       </label>
                       <select name="tipoatividade" style="width: 260px;">
                         <?=$selectTipo;?>
@@ -199,7 +199,7 @@ $messages =  $messagesQ->results();
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" href="#collapse1">Eventos Agendados</a>
+                      <a data-toggle="collapse" href="#collapse1">Atividades/Eventos agendados</a>
                     </h4>
                   </div>
                   <div id="collapse1" class="panel-collapse collapse in">
