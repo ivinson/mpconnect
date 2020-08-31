@@ -143,6 +143,17 @@ if ($settings->track_guest == 1 && $user->isLoggedIn()) {
     <link href="<?= $us_url_root ?>css/themes/all-themes.css" rel="stylesheet" />
 
 
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+var OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+OneSignal.init({
+    appId: "2ca39625-ddba-4b7b-8990-176341f0845d",
+});
+});
+</script>
+
+
 </head>
 
 <style>
@@ -320,7 +331,7 @@ if ($settings->track_guest == 1 && $user->isLoggedIn()) {
                     </li>
                     <li class="">
                         <a href="<?= $us_url_root ?>users/relatorios_cidade.php">
-                            <i class="material-icons">assignment_turned_in</i>
+                            <i class="material-icons">list</i>
                             <span>Meus Relatórios </span>
                         </a>
                     </li>
@@ -331,6 +342,12 @@ if ($settings->track_guest == 1 && $user->isLoggedIn()) {
                         <a href="<?= $us_url_root ?>users/relatorios_regionais.php">
                             <i class="material-icons">list</i>
                             <span>Relatórios Regionais</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= $us_url_root ?>users/relatorio_geral.php">
+                            <i class="material-icons">list</i>
+                            <span>Relatório GERAL 2019</span>
                         </a>
                     </li>
                     <?php } ?> 

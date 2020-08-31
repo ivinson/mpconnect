@@ -69,16 +69,16 @@ $relatorios = $db->findById($_GET['idrelatorio'], 'relatoriomensal');
 
 // dump($relatorios);
 
-$mes_relatorio = $relatorios->results()[0]->mes;
-$ano_relatorio = $relatorios->results()[0]->ano;
+$mes_relatorio    = $relatorios->results()[0]->mes;
+$ano_relatorio    = $relatorios->results()[0]->ano;
 $cidade_relatorio = $relatorios->results()[0]->idcidade;
 $agendadopor      = $relatorios->results()[0]->preenchidopor;
-$descricao_mes = $relatorios->results()[0]->descritivo;
-$cidade = $db->findById($cidade_relatorio, 'cidades');
+$descricao_mes    = $relatorios->results()[0]->descritivo;
+$cidade           = $db->findById($cidade_relatorio, 'cidades');
 // dump($cidade);
 $nomecidade =  $cidade->results()[0]->nome_cidade;
 #------------
-// $agendado_por =  $db->findById($cidade_relatorio, 'users')->results()[0]->nome_cidade;
+ $whats =  utf8_encode( $db->findById($agendadopor, 'users')->results()[0]->whats );
 
 //  echoId($agendadopor,"users","fname");
 
@@ -332,8 +332,32 @@ a.*
       <?php
     }
 
+
+    // $whats = utf8_encode($m->whats);
+    // $whats = "+55 (11) 99879-4536";
+    $whats = str_replace("+", "", $whats);
+    $whats = str_replace(" ", "", $whats);
+    $whats = str_replace("(", "", $whats);
+    $whats = str_replace(")", "", $whats);
+    $whats = str_replace("-", "", $whats);
+
+
+
     ?>
 
+
+
+<center>
+
+  <a   
+  class='btn btn-lg bg-teal waves-effect'  
+  target='_blank' 
+  href='https://wa.me/<?=$whats?>?text=Olá%20querido(a)%20.Tudo bem?%20Acabei%20de%20ler%20o%20relatório%20ministerial%20de%20sua%20cidade.%20%0D%0AFiquei%20muito%20contente%20com%20tudo%20o%20que%20li.'>
+  <i class='material-icons'>forum</i> 
+  <span>Enviar mensagem por whats</span>
+</a>                                                                       
+
+</center>
 
 <!-- footers -->
 <?php require_once $abs_us_root . $us_url_root . 'users/includes/page_footer.php';
